@@ -7,6 +7,7 @@ import {
   Globe,
   LayoutDashboard,
   Link2,
+  MapPin,
   MessageSquare,
   Search,
   Sparkles,
@@ -58,6 +59,11 @@ const projectNavItems = [
     to: "/p/$projectId/audit" as const,
     label: "Site Audit",
     icon: ClipboardCheck,
+  },
+  {
+    to: "/p/$projectId/hyperlocal" as const,
+    label: "Hyperlocal",
+    icon: MapPin,
   },
   {
     to: "/p/$projectId/brand-lookup" as const,
@@ -135,6 +141,7 @@ export function getProjectNavGroups(projectId: string) {
         byPath("/p/$projectId/rank-tracking"),
         byPath("/p/$projectId/saved"),
         byPath("/p/$projectId/audit"),
+        byPath("/p/$projectId/hyperlocal"),
       ],
     },
     {
